@@ -12,6 +12,7 @@ import playerRoutes from './routes/player';
 import countryRoutes from './routes/country';
 import teamRoutes from './routes/team';
 import competitionRoutes from './routes/competition';
+import matchRoutes from './routes/match';
 
 // middlewares
 app.use(cors());
@@ -27,6 +28,7 @@ app.use(playerRoutes);
 app.use(countryRoutes);
 app.use(teamRoutes);
 app.use(competitionRoutes);
+app.use(matchRoutes);
 
 // settings
 app.set('port', process.env.PORT || 3000);

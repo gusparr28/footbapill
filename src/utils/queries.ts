@@ -73,7 +73,25 @@ const queries = {
     GET_NATIONAL_COMPETITIONS: `SELECT * FROM seleccion_competicion`,
     CREATE_NATIONAL_COMPETITION: `INSERT INTO seleccion_competicion (id_seleccion, id_competicion) VALUES ($1, $2) RETURNING *`,
     UPDATE_NATIONAL_COMPETITION: `UPDATE seleccion_competicion SET id_seleccion = $1, id_competicion = $2 WHERE id_seleccion_competicion = $3 RETURNING *`,
-    DELETE_NATIONAL_COMPETITION: `DELETE FROM seleccion_competicion WHERE id_seleccion_competicion = $1`
+    DELETE_NATIONAL_COMPETITION: `DELETE FROM seleccion_competicion WHERE id_seleccion_competicion = $1`,
+
+    GET_MATCH: `SELECT * FROM partido WHERE id_partido = $1`,
+    GET_MATCHES: `SELECT * FROM partido`,
+    CREATE_MATCH: `INSERT INTO partido (fecha_partido) VALUES ($1) RETURNING *`,
+    UPDATE_MATCH: `UPDATE partido SET fecha_partido = $1 WHERE id_partido = $2 RETURNING *`,
+    DELETE_MATCH: `DELETE FROM partido WHERE id_partido = $1`,
+
+    GET_CLUB_MATCH: `SELECT * FROM partido_club WHERE id_partido_club = $1`,
+    GET_CLUB_MATCHES: `SELECT * FROM partido_club`,
+    CREATE_CLUB_MATCH: `INSERT INTO partido_club (resultado_partido_club, id_partido, id_club_competicion_local, id_club_competicion_visitante) VALUES ($1, $2, $3, $4) RETURNING *`,
+    UPDATE_CLUB_MATCH: `UPDATE partido_club SET resultado_partido_club = $1, id_partido = $2, id_club_competicion_local = $3, id_club_competicion_visitante = $4 WHERE id_partido_club = $5 RETURNING *`,
+    DELETE_CLUB_MATCH: `DELETE FROM partido_club WHERE id_partido_club = $1`,
+
+    GET_NATIONAL_MATCH: `SELECT * FROM partido_seleccion WHERE id_partido_seleccion = $1`,
+    GET_NATIONAL_MATCHES: `SELECT * FROM partido_seleccion`,
+    CREATE_NATIONAL_MATCH: `INSERT INTO partido_seleccion (resultado_partido_seleccion, id_partido, id_seleccion_competicion_local, id_seleccion_competicion_visitante) VALUES ($1, $2, $3, $4) RETURNING *`,
+    UPDATE_NATIONAL_MATCH: `UPDATE partido_seleccion SET resultado_partido_seleccion = $1, id_partido = $2, id_seleccion_competicion_local = $3, id_seleccion_competicion_visitante = $4 WHERE id_partido_seleccion = $5 RETURNING *`,
+    DELETE_NATIONAL_MATCH: `DELETE FROM partido_seleccion WHERE id_partido_seleccion = $1`
 };
 
 export default queries;
