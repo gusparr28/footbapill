@@ -55,7 +55,25 @@ const queries = {
     GET_NATIONALS: `SELECT * FROM seleccion`,
     CREATE_NATIONAL: `INSERT INTO seleccion (nombre_seleccion, id_director_tecnico) VALUES ($1, $2) RETURNING *`,
     UPDATE_NATIONAL: `UPDATE seleccion SET nombre_seleccion = $1, id_director_tecnico = $2 WHERE id_seleccion = $3 RETURNING *`,
-    DELETE_NATIONAL: `DELETE FROM seleccion WHERE id_seleccion = $1`
+    DELETE_NATIONAL: `DELETE FROM seleccion WHERE id_seleccion = $1`,
+
+    GET_COMPETITION: `SELECT * FROM competicion WHERE id_competicion = $1`,
+    GET_COMPETITIONS: `SELECT * FROM competicion`,
+    CREATE_COMPETITION: `INSERT INTO competicion (nombre_competicion) VALUES ($1) RETURNING *`,
+    UPDATE_COMPETITION: `UPDATE competicion SET nombre_competicion = $1 WHERE id_competicion = $2 RETURNING *`,
+    DELETE_COMPETITION: `DELETE FROM competicion WHERE id_competicion = $1`,
+
+    GET_CLUB_COMPETITION: `SELECT * FROM club_competicion WHERE id_club_competicion = $1`,
+    GET_CLUB_COMPETITIONS: `SELECT * FROM club_competicion`,
+    CREATE_CLUB_COMPETITION: `INSERT INTO club_competicion (id_club, id_competicion) VALUES ($1, $2) RETURNING *`,
+    UPDATE_CLUB_COMPETITION: `UPDATE club_competicion SET id_club = $1, id_competicion = $2 RETURNING *`,
+    DELETE_CLUB_COMPETITION: `DELETE FROM club_competicion WHERE id_club_competicion = $1`,
+
+    GET_NATIONAL_COMPETITION: `SELECT * FROM seleccion_competicion WHERE id_seleccion_competicion = $1`,
+    GET_NATIONAL_COMPETITIONS: `SELECT * FROM seleccion_competicion`,
+    CREATE_NATIONAL_COMPETITION: `INSERT INTO seleccion_competicion (id_seleccion, id_competicion) VALUES ($1, $2) RETURNING *`,
+    UPDATE_NATIONAL_COMPETITION: `UPDATE seleccion_competicion SET id_seleccion = $1, id_competicion = $2 WHERE id_seleccion_competicion = $3 RETURNING *`,
+    DELETE_NATIONAL_COMPETITION: `DELETE FROM seleccion_competicion WHERE id_seleccion_competicion = $1`
 };
 
 export default queries;

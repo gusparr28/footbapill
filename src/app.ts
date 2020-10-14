@@ -11,6 +11,7 @@ import fileRoute from './routes/file';
 import playerRoutes from './routes/player';
 import countryRoutes from './routes/country';
 import teamRoutes from './routes/team';
+import competitionRoutes from './routes/competition';
 
 // middlewares
 app.use(cors());
@@ -25,6 +26,7 @@ app.use(fileRoute, express.static(path.resolve('uploads')));
 app.use(playerRoutes);
 app.use(countryRoutes);
 app.use(teamRoutes);
+app.use(competitionRoutes);
 
 // settings
 app.set('port', process.env.PORT || 3000);
