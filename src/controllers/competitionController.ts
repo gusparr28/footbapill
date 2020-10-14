@@ -18,7 +18,7 @@ export const getCompetition = async (req: Request, res: Response): Promise<Respo
 export const getCompetitions = async (req: Request, res: Response): Promise<Response> => {
     try {
         const competitions: QueryResult = await pool.query(queries.GET_COMPETITIONS);
-        return res.status(200).json({ status: 200, clubs: competitions.rows });
+        return res.status(200).json({ status: 200, competitions: competitions.rows });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ status: 500, error: e });
