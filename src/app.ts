@@ -9,6 +9,7 @@ const app = express();
 import authRoutes from './routes/auth';
 import fileRoute from './routes/file';
 import playerRoutes from './routes/player';
+import countryRoutes from './routes/country';
 
 // middlewares
 app.use(cors());
@@ -21,6 +22,7 @@ passport.use(passportMiddleware);
 app.use(authRoutes);
 app.use(fileRoute, express.static(path.resolve('uploads')));
 app.use(playerRoutes);
+app.use(countryRoutes);
 
 // settings
 app.set('port', process.env.PORT || 3000);

@@ -40,7 +40,7 @@ export const updatePlayer = async (req: Request, res: Response): Promise<Respons
     try {
         const id = parseInt(req.params.id);
         const { nombre_jugador, edad_jugador, pie_jugador, fecha_jugador, altura_jugador, salario_jugador, dorsal_jugador, id_seleccion, id_club } = req.body;
-        await pool.query(queries.UPDATE_PLAYER, [nombre_jugador, edad_jugador, pie_jugador, fecha_jugador, altura_jugador, salario_jugador, dorsal_jugador, id_seleccion, id_club]);
+        await pool.query(queries.UPDATE_PLAYER, [nombre_jugador, edad_jugador, pie_jugador, fecha_jugador, altura_jugador, salario_jugador, dorsal_jugador, id_seleccion, id_club, id]);
         return res.status(200).json({ status: 200, message: `Player ${id} successfully updated`, body: { player: nombre_jugador } });
     } catch (e) {
         console.error(e);
@@ -95,7 +95,7 @@ export const updatePosition = async (req: Request, res: Response): Promise<Respo
     try {
         const id = parseInt(req.params.id);
         const { nombre_posicion } = req.body;
-        await pool.query(queries.UPDATE_POSITION, [nombre_posicion]);
+        await pool.query(queries.UPDATE_POSITION, [nombre_posicion, id]);
         return res.status(200).json({ status: 200, message: `Position ${id} successfully updated`, body: { position: nombre_posicion } });
     } catch (e) {
         console.error(e);
@@ -150,7 +150,7 @@ export const updatePlayerPosition = async (req: Request, res: Response): Promise
     try {
         const id = parseInt(req.params.id);
         const { id_posicion, id_jugador } = req.body;
-        await pool.query(queries.UPDATE_PLAYER_POSITION, [id_posicion, id_jugador]);
+        await pool.query(queries.UPDATE_PLAYER_POSITION, [id_posicion, id_jugador, id]);
         return res.status(200).json({ status: 200, message: `Player position ${id} successfully updated` });
     } catch (e) {
         console.error(e);
@@ -205,7 +205,7 @@ export const updatePlayerNationality = async (req: Request, res: Response): Prom
     try {
         const id = parseInt(req.params.id);
         const { id_jugador, id_pais } = req.body;
-        await pool.query(queries.UPDATE_PLAYER_NATIONALITY, [id_jugador, id_pais]);
+        await pool.query(queries.UPDATE_PLAYER_NATIONALITY, [id_jugador, id_pais ,id]);
         return res.status(200).json({ status: 200, message: `Player nationality  ${id} successfully updated` });
     } catch (e) {
         console.error(e);
