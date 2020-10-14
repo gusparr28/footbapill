@@ -4,7 +4,7 @@ import { QueryResult } from 'pg';
 import queries from '../utils/queries';
 import { pool } from '../database';
 
-export const getPlayer = async (req: Request, res: Response) => {
+export const getPlayer = async (req: Request, res: Response): Promise<Response> => {
     try {
         const id = parseInt(req.params.id);
         const player: QueryResult = await pool.query(queries.GET_PLAYER, [id]);
