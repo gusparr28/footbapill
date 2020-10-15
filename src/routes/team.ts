@@ -23,11 +23,11 @@ router.route('/club/:id')
     .put(updateClub)
     .delete(deleteClub)
 
-router.route('/seleccion')
+router.route('/national')
     .get(getNationals)
     .post(createNational)
 
-router.route('/seleccion/:id')
+router.route('/national/:id')
     .get(getNational)
     .put(updateNational)
     .delete(deleteNational)

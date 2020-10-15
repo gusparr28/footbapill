@@ -29,7 +29,7 @@ export const createCompetition = async (req: Request, res: Response): Promise<Re
     try {
         const { nombre_competicion } = req.body;
         await pool.query(queries.CREATE_COMPETITION, [nombre_competicion]);
-        return res.status(200).json({ status: 200, message: 'Club successfully created', body: { competition: nombre_competicion } });
+        return res.status(200).json({ status: 200, message: 'Competition successfully created', body: { competition: nombre_competicion } });
     } catch (e) {
         console.error(e);
         return res.status(500).json({ status: 500, error: e });
