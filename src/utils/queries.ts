@@ -91,7 +91,19 @@ const queries = {
     GET_NATIONAL_MATCHES: `SELECT * FROM partido_seleccion`,
     CREATE_NATIONAL_MATCH: `INSERT INTO partido_seleccion (resultado_partido_seleccion, id_partido, id_seleccion_competicion_local, id_seleccion_competicion_visitante) VALUES ($1, $2, $3, $4) RETURNING *`,
     UPDATE_NATIONAL_MATCH: `UPDATE partido_seleccion SET resultado_partido_seleccion = $1, id_partido = $2, id_seleccion_competicion_local = $3, id_seleccion_competicion_visitante = $4 WHERE id_partido_seleccion = $5 RETURNING *`,
-    DELETE_NATIONAL_MATCH: `DELETE FROM partido_seleccion WHERE id_partido_seleccion = $1`
+    DELETE_NATIONAL_MATCH: `DELETE FROM partido_seleccion WHERE id_partido_seleccion = $1`,
+
+    GET_COACH: `SELECT * FROM director_tecnico WHERE id_director_tecnico = $1`,
+    GET_COACHES: `SELECT * FROM director_tecnico`,
+    CREATE_COACH: `INSERT INTO director_tecnico (nombre_director_tecnico, edad_director_tecnico, fecha_director_tecnico, salario_director_tecnico) VALUES ($1, $2, $3, $4) RETURNING *`,
+    UPDATE_COACH: `UPDATE director_tecnico SET nombre_director_tecnico = $1, edad_director_tecnico = $2, fecha_director_tecnico = $3, salario_director_tecnico = $4 WHERE id_director_tecnico = $5 RETURNING *`,
+    DELETE_COACH: `DELETE FROM director_tecnico WHERE id_director_tecnico = $1`,
+
+    GET_COACH_NATIONALITY: `SELECT * FROM director_tecnico_nacionalidad WHERE id_director_tecnico_nacionalidad = $1`,
+    GET_COACH_NATIONALITIES: `SELECT * FROM director_tecnico_nacionalidad`,
+    CREATE_COACH_NATIONALITY: `INSERT INTO director_tecnico_nacionalidad (id_director_tecnico, id_pais) VALUES ($1, $2) RETURNING *`,
+    UPDATE_COACH_NATIONALITY: `UPDATE director_tecnico_nacionalidad SET id_director_tecnico = $1, id_pais = $2 WHERE id_director_tecnico_nacionalidad = $3 RETURNING *`,
+    DELETE_COACH_NATIONALITY: `DELETE FROM director_tecnico_nacionalidad WHERE id_director_tecnico_nacionalidad = $1`
 };
 
 export default queries;
