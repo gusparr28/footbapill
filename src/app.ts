@@ -13,6 +13,7 @@ import countryRoutes from './routes/country';
 import teamRoutes from './routes/team';
 import competitionRoutes from './routes/competition';
 import matchRoutes from './routes/match';
+import coachRoutes from './routes/coach';
 
 // middlewares
 app.use(cors());
@@ -29,6 +30,7 @@ app.use(countryRoutes);
 app.use(teamRoutes);
 app.use(competitionRoutes);
 app.use(matchRoutes);
+app.use(coachRoutes);
 
 // settings
 app.set('port', process.env.PORT || 3000);
