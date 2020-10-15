@@ -1,5 +1,5 @@
 const app = require('./app');
-import './database';
+require('./database');
 
 // starting the server
 app.listen(app.get('port'), () => {
