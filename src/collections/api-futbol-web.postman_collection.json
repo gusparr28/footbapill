@@ -1,0 +1,3381 @@
+{
+	"info": {
+		"_postman_id": "f094c790-2501-4fcc-b6fc-b3ff280b25a2",
+		"name": "api-futbol-web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"gustavo@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signin"
+					]
+				},
+				"description": "metodo post, loggeando a un usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"gustavo@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				},
+				"description": "metodo post, registrando a un usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/player/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/player/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"player",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo un jugador en específico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/player",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_jugador\": \"Yangel Herrera\",\r\n    \"edad_jugador\": \"21\",\r\n    \"pie_jugador\": \"derecho\",\r\n    \"fecha_jugador\": \"23-10-20\",\r\n    \"altura_jugador\": \"1.78\",\r\n    \"salario_jugador\": \"20.000\",\r\n    \"dorsal_jugador\": \"8\",\r\n    \"id_seleccion\": \"1\",\r\n    \"id_club\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/player",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"player"
+					]
+				},
+				"description": "metodo post, creando a un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/player",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/player",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"player"
+					]
+				},
+				"description": "metodo get, obteniendo a todos los jugadores"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/player/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_jugador\": \"Yangel Herrera\",\r\n    \"edad_jugador\": \"21\",\r\n    \"pie_jugador\": \"derecho\",\r\n    \"fecha_jugador\": \"23-10-20\",\r\n    \"altura_jugador\": \"1.78\",\r\n    \"salario_jugador\": \"20.000\",\r\n    \"dorsal_jugador\": \"10\",\r\n    \"id_seleccion\": \"1\",\r\n    \"id_club\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/player/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"player",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando a un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/player/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/player/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"player",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando a un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/position/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/position/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"position",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo una posicion en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/position",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/position",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"position"
+					]
+				},
+				"description": "metodo get, obteniendo todas las posiciones"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/position",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_posicion\": \"Delantero\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/position",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"position"
+					]
+				},
+				"description": "metodo post, creando una posicion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/position/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/position/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"position",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando una posicion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/position/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"description": "Description",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_posicion\": \"Mediocampo\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/position/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"position",
+						"1"
+					]
+				},
+				"description": "metodo post, actualizando una posicion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerPosition/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/position",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"position"
+					]
+				},
+				"description": "metodo get, obteniendo la posicion de un jugador en específico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerPosition",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerPosition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerPosition"
+					]
+				},
+				"description": "metodo get, obteniendo todas las posiciones de todos los jugadores"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerPosition/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_posicion\": \"2\",\r\n    \"id_jugador\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerPosition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerPosition",
+						"1"
+					]
+				},
+				"description": "metodo post, actualizando la posicion de un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerPosition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_posicion\": \"1\",\r\n    \"id_jugador\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerPosition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerPosition"
+					]
+				},
+				"description": "metodo post, creando la posicion de un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerPosition/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerPosition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerPosition",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando la posicion de un jugador en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerNationality/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerNationality/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerNationality",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo la nacionalidad de un jugador en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerNationality",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerNationality",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerNationality"
+					]
+				},
+				"description": "metodo get, obteniendo todas las nacionalidades de un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerNationality",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_jugador\": \"1\",\r\n    \"id_pais\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerNationality",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerNationality"
+					]
+				},
+				"description": "metodo post, creando la nacionalidad de un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerNationality/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_jugador\": \"2\",\r\n    \"id_pais\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerNationality/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerNationality",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando la nacionalidad de un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/playerNationality/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/playerNationality/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playerNationality",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando la nacionalidad de un jugador"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/city",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/city",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"city"
+					]
+				},
+				"description": "metodo get, obteniendo todas las ciudades"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/city/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/city/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"city",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo una ciudad en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/city",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_ciudad\": \"London\",\r\n    \"poblacion_ciudad\": \"7.000.000\",\r\n    \"estado_ciudad\": \"London\",\r\n    \"id_pais\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/city",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"city"
+					]
+				},
+				"description": "metodo post, creando una ciudad"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/city/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_ciudad\": \"Manchester\",\r\n    \"poblacion_ciudad\": \"7.000.000\",\r\n    \"estado_ciudad\": \"Manchester\",\r\n    \"id_pais\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/city/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"city",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando una ciudad"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/city/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/city/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"city",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando una ciudad"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/country/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/country/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo un pais en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/country",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/country",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country"
+					]
+				},
+				"description": "metodo get, obteniendo todos los paises"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/country",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_pais\": \"Inglaterra\",\r\n    \"continente_pais\": \"Europa\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/country",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country"
+					]
+				},
+				"description": "metodo post, creando un pais"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/country/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_pais\": \"Francia\",\r\n    \"continente_pais\": \"Europa\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/country/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando el pais"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/country/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/country/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"country",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando un pais"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/league",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/league",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"league"
+					]
+				},
+				"description": "metodo get, obteniendo todas las ligas"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/league/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/league/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"league",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo una liga en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/league",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cantidad_equipos_liga\": \"20\",\r\n    \"nombre_liga\": \"Premier League\",\r\n    \"id_pais\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/league",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"league"
+					]
+				},
+				"description": "metodo post, creando una liga"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/league/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cantidad_equipos_liga\": \"20\",\r\n    \"nombre_liga\": \"Serie A\",\r\n    \"id_pais\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/league/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"league",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando una liga en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/league/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/league/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"league",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando una liga en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/club",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/club",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"club"
+					]
+				},
+				"description": "metodo get, obteniendo todos los clubes"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/club/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/club/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"club",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo un club en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/club",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_club\": \"Manchester United\",\r\n    \"propietario_club\": \"The Glazers\",\r\n    \"estadio_club\": \"Old Trafford\",\r\n    \"id_director_tecnico\": \"1\",\r\n    \"id_ciudad\": \"Manchester\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/club",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"club"
+					]
+				},
+				"description": "metodo post, creando un club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/club/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_club\": \"Manchester United\",\r\n    \"propietario_club\": \"The Glazers\",\r\n    \"estadio_club\": \"Old Trafford\",\r\n    \"id_director_tecnico\": \"2\",\r\n    \"id_ciudad\": \"Manchester\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/club/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"club",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando un club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/club/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/club/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"club",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando un club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/national",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/national",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"national"
+					]
+				},
+				"description": "metodo get, obteniendo todas las selecciones"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/national/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/national/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"national",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo una seleccion en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/national",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_seleccion\": \"Inglaterra\",\r\n    \"id_director_tecnico\": \"3\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/national",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"national"
+					]
+				},
+				"description": "metodo post, creando una seleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/national/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_seleccion\": \"Inglaterra\",\r\n    \"id_director_tecnico\": \"4\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/national/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"national",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando una seleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/national/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/national/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"national",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando una seleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/competition",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/competition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"competition"
+					]
+				},
+				"description": "metodo get, obteniendo todas las competiciones"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/competition/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/competition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"competition",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo una competicion en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/competition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_competicion\": \"Champions League\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/competition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"competition"
+					]
+				},
+				"description": "metodo post, creando una competicion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/competition/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_competicion\": \"Europa League\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/competition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"competition",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando una competicion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/competition/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/competition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"competition",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando una competicion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubCompetition",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubCompetition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubCompetition"
+					]
+				},
+				"description": "metodo get, obteniendo las competiciones de un club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubCompetition/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubCompetition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubCompetition",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo las competiciones de un club en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubCompetition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_club\": \"1\",\r\n    \"id_competicion\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubCompetition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubCompetition"
+					]
+				},
+				"description": "metodo post, creando la competicion de un club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubCompetition/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_club\": \"1\",\r\n    \"id_competicion\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubCompetition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubCompetition",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando la competicion de un club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubCompetition/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubCompetition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubCompetition",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando la competicion de un club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalCompetition",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalCompetition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalCompetition"
+					]
+				},
+				"description": "metodo get, obteniendo todas las competiciones de una seleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalCompetition/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalCompetition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalCompetition",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo las competiciones de una seleccion en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalCompetition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_seleccion\": \"1\",\r\n    \"id_competicion\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalCompetition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalCompetition"
+					]
+				},
+				"description": "metodo post, creando la competicion de una seleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalCompetition/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_seleccion\": \"1\",\r\n    \"id_competicion\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalCompetition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalCompetition",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando la competicion de una seleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalCompetition/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalCompetition/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalCompetition",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando la competicion de una seleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/match",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/match",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"match"
+					]
+				},
+				"description": "metodo get, obteniendo todos los partidos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/match/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/match/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"match",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo un partido en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/match",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha_partido\": \"28/03/20\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/match",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"match"
+					]
+				},
+				"description": "metodo post, creando un partido"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/match/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha_partido\": \"30/03/20\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/match/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"match",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando un partido"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/match/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/match/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"match",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando un partido"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubMatch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubMatch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubMatch"
+					]
+				},
+				"description": "metodo get, obteniendo todos los partidos de los clubes"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubMatch/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubMatch/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubMatch",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo todos los partidos de un club"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubMatch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resultado_partido_club\": \"2-0\",\r\n    \"id_partido\": \"1\",\r\n    \"id_club_competicion_local\": \"1\",\r\n    \"id_club_competicion_visitante\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubMatch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubMatch"
+					]
+				},
+				"description": "metodo post, creando un partido entre dos clubes"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubMatch/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resultado_partido_club\": \"2-1\",\r\n    \"id_partido\": \"1\",\r\n    \"id_club_competicion_local\": \"1\",\r\n    \"id_club_competicion_visitante\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubMatch/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubMatch",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando un partido entre dos clubes"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/clubMatch/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/clubMatch/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"clubMatch",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando un partido de clubes"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalMatch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalMatch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalMatch"
+					]
+				},
+				"description": "metodo get, obteniendo todos los partidos de las selecciones"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalMatch/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalMatch/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalMatch",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo todos los partidos de una seleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalMatch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resultado_partido_seleccion\": \"3-0\",\r\n    \"id_partido\": \"1\",\r\n    \"id_seleccion_competicion_local\": \"1\",\r\n    \"id_seleccion_competicion_visitante\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalMatch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalMatch"
+					]
+				},
+				"description": "metodo pos, creando un partido entre dos selecciones"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalMatch/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resultado_partido_seleccion\": \"4-0\",\r\n    \"id_partido\": \"1\",\r\n    \"id_seleccion_competicion_local\": \"1\",\r\n    \"id_seleccion_competicion_visitante\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalMatch/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalMatch",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando un partido entre dos selecciones"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/nationalMatch/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/nationalMatch/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nationalMatch",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando un partido de selecciones"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coach",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/coach",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coach"
+					]
+				},
+				"description": "metodo get, obteniendo todos los directores tecnicos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coach/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/coach/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coach",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo un director tecnico en especifico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coach",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_director_tecnico\": \"Mauricio Pochettino\",\r\n    \"edad_director_tecnico\": \"48\",\r\n    \"fecha_director_tecnico\": \"02/03/1972\",\r\n    \"salario_director_tecnico\": \"192.000€\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/coach",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coach"
+					]
+				},
+				"description": "metodo post, creando un director tecnico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coach/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_director_tecnico\": \"Mauricio Pochettino\",\r\n    \"edad_director_tecnico\": \"48\",\r\n    \"fecha_director_tecnico\": \"02/03/1972\",\r\n    \"salario_director_tecnico\": \"200.000€\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/coach/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coach",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando un director tecnico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coach/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/coach/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coach",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando un director tecnico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coachNationality",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/coachNationality",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coachNationality"
+					]
+				},
+				"description": "metodo get, obteniendo todas las nacionalidades de un director tecnico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coachNationality/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/coachNationality/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coachNationality",
+						"1"
+					]
+				},
+				"description": "metodo get, obteniendo una nacionalidad de un director tecnico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coachNationality",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_director_tecnico\": \"1\",\r\n    \"id_pais\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/coachNationality",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coachNationality"
+					]
+				},
+				"description": "metodo post, creando la nacionalidad de un director tecnico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coachNationality/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_director_tecnico\": \"2\",\r\n    \"id_pais\": \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/coachNationality/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coachNationality",
+						"1"
+					]
+				},
+				"description": "metodo put, actualizando la nacionalidad de un director tecnico"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/coachNationality/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"description": "Description",
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJsYW5jYUBnbWFpbC5jb20iLCJpYXQiOjE2MDI2NTMyODh9.Kmw8FZbaWD8xao7YUQ-n43fHNOhKkoKXZHmaj795i-c",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/coachNationality/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coachNationality",
+						"1"
+					]
+				},
+				"description": "metodo delete, eliminando la nacionalidad de un director tecnico"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
